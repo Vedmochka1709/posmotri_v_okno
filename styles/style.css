@@ -16,11 +16,9 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-<<<<<<< HEAD
   display: flex;
   align-items: center;
-=======
->>>>>>> 9155621f057a6a861bfe491ddc93186c54d43f46
+  justify-content: center;
 }
 
 h1,
@@ -41,7 +39,6 @@ ul,
 ol {
   list-style: none;
 }
-<<<<<<< HEAD
 
 .visually-hidden {
   position: absolute;
@@ -101,7 +98,6 @@ ol {
 }
 
 .result__video {
-  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -297,5 +293,3 @@ ol {
   text-align: center;
   color: #fff;
 }
-=======
->>>>>>> 9155621f057a6a861bfe491ddc93186c54d43f46
