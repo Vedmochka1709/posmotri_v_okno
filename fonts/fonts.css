@@ -1,5 +1,9 @@
 @font-face {
+<<<<<<< HEAD
   font-family: 'Oswald';
+=======
+  font-family: Oswald;
+>>>>>>> 9155621f057a6a861bfe491ddc93186c54d43f46
   src: url(Oswald-Bold.woff2) format('woff2'), url(Oswald-Bold.woff) format('woff');
   font-weight: 700;
   font-style: normal;
