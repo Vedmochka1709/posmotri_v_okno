@@ -59,6 +59,7 @@ ol {
   text-align: center;
   color: #fff;
   background-color: transparent;
+  min-height: 34px;
 }
 
 .button:focus {
@@ -70,18 +71,16 @@ ol {
   outline-offset: -3px;
 }
 
-.button:active {
-  background-color: #545050;
-}
-
-.button:active .button {
-  text-decoration: none;
-}
-
 .button:hover {
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }
+
+.button:active {
+  background-color: #545050;
+  text-decoration: none;
+}
+
 
 .content {
   display: flex;
@@ -132,14 +131,14 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
+  color: #fff;
   background-color: transparent;
   appearance: none;
   border: none;
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
-  width: 225px;
-  height: 27px;
+  min-width: 225px;
+  min-height: 27px;
 }
 
 .search-form__textfield:focus {
@@ -182,8 +181,7 @@ ol {
 }
 
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
+  min-width: 194px;
   align-self: end;
 }
 
@@ -215,30 +213,29 @@ ol {
   position: relative;
 }
 
-.content__list-item {
+.content__list-item:not(:last-of-type) {
   margin-bottom: 30px;
 }
 
 .content__card-link {
   display: block;
   text-decoration: none;
-  padding: 2px 2px 0;
+  padding: 2px;
 }
 
-.content__card-link:active {
-  background-color: #545050;
+.content__card-link:hover {  /*общие стили*/
+  text-decoration: underline 1px #FFF; 
+  text-decoration-skip-ink: none;
+  text-underline-offset: 3px;
 }
 
-.content__card-link:hover .content__video-card-title {
+.content__card-link:hover .content__video-card-title { /*для более жирного подчёркивания*/
   text-decoration: underline 2px #FFF;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 3px;
 }
 
-.content__card-link:hover .content__video-card-description {
-  text-decoration: underline 1px #FFF;
-  text-decoration-skip-ink: none;
-  text-underline-offset: 3px;
+.content__card-link:active,
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:focus {
@@ -259,6 +256,8 @@ ol {
 .content__video-card-thumbnail {
   height: 103px;
   width: 194px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .content__video-card-title {
@@ -269,6 +268,9 @@ ol {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -280,16 +282,5 @@ ol {
 }
 
 .more-button {
-  width: 399px;
-  height: 34px;
-}
-
-.error-template {
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 110%;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fff;
+  min-width: 399px;
 }
